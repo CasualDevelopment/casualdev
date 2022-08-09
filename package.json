@@ -1,0 +1,27 @@
+{
+  "name": "casualdev",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CasualDevelopment/casualdev.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CasualDevelopment/casualdev/issues"
+  },
+  "homepage": "https://github.com/CasualDevelopment/casualdev#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.1"
+  },
+  "dependencies": {
+    "axios": "^0.27.2"
+  }
+}
