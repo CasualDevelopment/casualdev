@@ -54,11 +54,30 @@ body {
   color: #51fa7b;
 }
 
+@media screen and (max-width: 700px) {
+  .header_logo-wrapper {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .header_logo-wrapper img {
+    width: 50%;
+  }
+
+  .nav {
+    margin-bottom: 1.5em;
+  }
+  .nav_list {
+    justify-content: center;
+  }
+}
+
 /* hero Section Styles */
 .hero {
   margin: 0 auto;
   width: 100%;
-  height: 38vw;
+  height: 38dvw;
   min-height: 500px;
   background-image: url("/assests/green-hero.jpg");
   background-repeat: no-repeat;
@@ -80,7 +99,7 @@ body {
   content: "";
   background-color: #252324;
   padding: 3vw;
-  width: 45vw;
+  width: 45dvw;
   z-index: 2;
   transform: rotate(-1.5deg) translateY(10.5vw) translateX(-2vw);
 }
@@ -117,17 +136,91 @@ body {
   z-index: 2;
 }
 
+@media screen and (max-width: 700px) {
+  .hero_text-wrapper {
+    height: 38dvw;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .hero h2 {
+    text-align: center;
+    font-size: 8svw;
+    transform: rotate(-1deg);
+  }
+
+  .hero p {
+    margin-top: 0.4em;
+    font-size: 5.5svw;
+    transform: translateX(-4rem) rotate(2.5deg);
+  }
+
+  .hero_text-wrapper::before {
+    padding: 6svw;
+    width: 80svw;
+    transform: rotate(-1.5deg) translateY(17.5vw) translateX(-2vw);
+  }
+
+  .hero_text-wrapper::after {
+    padding: 5svw;
+    width: 60svw;
+    transform: rotate(2.5deg) translateY(-13svw) translateX(-4svw);
+  }
+}
+
 /* Profile Section Styles */
 .profile {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 0.5fr));
+  background-color: whitesmoke;
 }
+
+.profile_content-wrapper {
+  justify-self: center;
+  margin: 0 2em;
+  margin-left: 60%;  
+}
+
+.profile_link-wrapper {
+  margin: 2em 2em;
+  margin-right: 75%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile_link-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.profile_link-list li a svg {
+  width: 2rem;
+  height: 2rem;
+}
+
+.twitter {
+  fill: #1DA1F2;
+}
+
+.youtube {
+  fill: #FF0000;
+}
+
+
+
 
 .profile-image-wrapper {
   width: 250px;
   height: 250px;
   border-radius: 100%;
-  background-color: #D0F4C1;
+  background-color: #d0f4c1;
   display: flex;
   justify-content: center;
   align-items: center;
