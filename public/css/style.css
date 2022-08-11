@@ -1,9 +1,8 @@
-@import url(https://fonts.bunny.net/css?family=andika-new-basic:400);
-
+@import url(https://fonts.bunny.net/css?family=alatsi:400|alfa-slab-one:400);
 html,
 body {
   margin: 0 auto;
-  font-family: "Andika New Basic", sans-serif;
+  font-family: "Alatsi", "Alfa Slab One", sans-serif;
   overflow-x: hidden;
 }
 /* header styles */
@@ -17,7 +16,7 @@ body {
 
 .header_logo-wrapper {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   text-decoration: none;
   color: black;
 }
@@ -58,23 +57,88 @@ body {
 /* hero Section Styles */
 .hero {
   margin: 0 auto;
-  width: 85vw;
-  height: 50vw;
-  background-image: url("/assests/hero.jpg");
+  width: 100%;
+  height: 38vw;
+  min-height: 500px;
+  background-image: url("/assests/green-hero.jpg");
+  background-repeat: no-repeat;
   background-size: cover;
+}
+
+.hero_text-wrapper {
+  margin-left: 2em;
+  display: block;
+  position: relative;
+  width: 100%;
+  top: 5em;
+  z-index: 2;
+}
+
+.hero_text-wrapper::before {
+  position: relative;
+  display: block;
+  content: "";
+  background-color: #252324;
+  padding: 3vw;
+  width: 45vw;
+  z-index: 2;
+  transform: rotate(-1.5deg) translateY(10.5vw) translateX(-2vw);
+}
+
+.hero_text-wrapper::after {
+  display: block;
+  content: "";
+  padding: 3vw;
+  width: 45vw;
+  background-color: #fed426;
+  z-index: -1;
+  transform: rotate(2.5deg) translateY(-8vw) translateX(2vw);
+}
+
+.hero h2 {
+  position: inherit;
+  color: white;
+  width: 100%;
+  font-size: 5vw;
+  font-weight: 900;
+  font-family: "Alfa Slab One";
+  margin-bottom: -0.2em;
+  z-index: 2;
+}
+
+.hero p {
+  position: inherit;
+  color: #005c46;
+  font-size: 3vw;
+  font-style: italic;
+  font-weight: bold;
+  margin-top: 0;
+  margin-left: 2em;
+  z-index: 2;
+}
+
+/* Profile Section Styles */
+.profile {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.profile-image-wrapper {
+  width: 250px;
+  height: 250px;
+  border-radius: 100%;
+  background-color: #D0F4C1;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.hero h2 {
-    color: black;
-    width: 100%;
-    text-align: center;
-    background-color: #51fa7b;
-    transform: rotate(-30deg);
+.profile-image-wrapper img {
+  position: relative;
+  z-index: 2;
+  border-radius: 100%;
+  width: 95%;
 }
-
 
 /* footer styles */
 .footer {
