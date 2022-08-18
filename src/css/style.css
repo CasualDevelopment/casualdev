@@ -174,22 +174,37 @@ body {
 /* Profile Section Styles */
 .profile {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 0.5fr));
+  grid-template-columns: 0.3fr 0.7fr;
   background-color: whitesmoke;
 }
 
 .profile_content-wrapper {
-  justify-self: center;
-  margin: 0 2em;
-  margin-left: 60%;  
+  justify-self: flex-start;
+  width: 95%;
+}
+
+.profile_content-wrapper h2 {
+  font-size: 3rem;
+  margin-bottom: 0;
+  text-decoration: underline;
+  text-decoration-color: #51fa7b;
+}
+
+.profile_content-wrapper p {
+  font-size: 1.5rem;
+  margin-top: 0;
 }
 
 .profile_link-wrapper {
-  margin: 2em 2em;
-  margin-right: 75%;
+  margin: 2em 0;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.profile_link-wrapper legend {
+  text-decoration: underline;
+  text-decoration-color: #005c46;
 }
 
 .profile_link-list {
@@ -206,15 +221,12 @@ body {
 }
 
 .twitter {
-  fill: #1DA1F2;
+  fill: #1da1f2;
 }
 
 .youtube {
-  fill: #FF0000;
+  fill: #ff0000;
 }
-
-
-
 
 .profile-image-wrapper {
   width: 250px;
@@ -231,6 +243,17 @@ body {
   z-index: 2;
   border-radius: 100%;
   width: 95%;
+}
+
+@media screen and (max-width: 700px) {
+  .profile {
+    grid-template-columns: 1fr;
+  }
+
+  .profile_content-wrapper {
+    text-align: center;
+    margin: 0 auto;
+  }
 }
 
 /* footer styles */
