@@ -7,14 +7,34 @@
         <link rel="stylesheet" href="/css/style.css">
         <link rel="shortcut icon" href="/assests/logo.png" type="image/png">
         <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-        <title>{{title}}</title>
+        <title>A blog post!</title>
     </head>
     <body>
-        {%include "header.njk" %}
+        <header class="header">
+    <a href="/" class="header_logo-wrapper">
+        <img src="/assests/logo.png"
+            alt="Green text that reads Casual Development wrapped in a green circle against a white background"
+            >
+        <h1>A blog post!</h1>
+    </a>
+    <nav class="nav">
+        <ul class="nav_list">
+            <li class="nav_item">
+                <a href="/">Home</a>
+            </li>
+            <li class="nav_item">
+                <a href="/blog/">Blog</a>
+            </li>
+        </ul>
+    </nav>
+</header>
         <main>
-            {{ content | safe }}
+            
         </main>
-        {%include "footer.njk" %}
+        <footer class="footer">
+    <img src="/assests/logo.png" alt="Green text that reads Casual Development wrapped in a green circle against a white background">
+    <p>&copy; 2022 CasualDevelopment <p> 
+</footer>
 
         <script>
             if (window.netlifyIdentity) {
