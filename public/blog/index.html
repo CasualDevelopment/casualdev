@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="/css/style.css">
         <link rel="shortcut icon" href="/assests/logo.png" type="image/png">
+        <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
         <title>casualDevelopments</title>
     </head>
     <body>
@@ -32,36 +33,27 @@
 <h2>Latest Developments</h2>
 <ul class="blog_list">
     
-        <li class="blog_list--item">
-            <div class="blog_item--img-wrapper">
-                <img 
-                src=http://localhost:8082/uploads/Casual_Dev_ca5a6e2149.png 
-                alt=http://localhost:8082The CasualDev_ website showing a white background with a green and black logo with navigation links labelled home and blog above a green background image of a leaf with water droplets and a white, black, green, and yellow title with the text &quot;CasualDevelopment, No experts in sight&quot;
-/>
-            </div>
-            <div class="blog_item--author">
-                <h2>Demo Post - remove prior to production</h2>
-                <div class="author-div">
-                    <p>By Jacob McCracken</p>
-                    <p>Published on: 2022-08-22</p>
-                </div>
-            </div>
-            <section class="blog_item--content">
-                
-                    This a demo blog post for development and testing and should be removed prior to production deployment.
-                    
-
-                </section>
-                <a href="/blog/posts/" class="blog_item-nav-link">
-                    <p>Read More</p>
-                </a>
-            </li>
-        
     </ul>
         </main>
         <footer class="footer">
     <img src="/assests/logo.png" alt="Green text that reads Casual Development wrapped in a green circle against a white background">
     <p>&copy; 2022 CasualDevelopment <p> 
 </footer>
+
+        <script>
+            if (window.netlifyIdentity) {
+                window
+                    .netlifyIdentity
+                    .on("init", user => {
+                        if (!user) {
+                            window
+                                .netlifyIdentity
+                                .on("login", () => {
+                                    document.location.href = "/admin/";
+                                });
+                        }
+                    });
+            }
+        </script>
     </body>
 </html>

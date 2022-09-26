@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="/css/style.css">
         <link rel="shortcut icon" href="/assests/logo.png" type="image/png">
+        <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
         <title>A blog post!</title>
     </head>
     <body>
@@ -34,5 +35,21 @@
     <img src="/assests/logo.png" alt="Green text that reads Casual Development wrapped in a green circle against a white background">
     <p>&copy; 2022 CasualDevelopment <p> 
 </footer>
+
+        <script>
+            if (window.netlifyIdentity) {
+                window
+                    .netlifyIdentity
+                    .on("init", user => {
+                        if (!user) {
+                            window
+                                .netlifyIdentity
+                                .on("login", () => {
+                                    document.location.href = "/admin/";
+                                });
+                        }
+                    });
+            }
+        </script>
     </body>
 </html>
