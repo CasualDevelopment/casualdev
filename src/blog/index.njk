@@ -1,20 +1,33 @@
 ---
+pageTitle: CasualDev_
 layout: 'base.njk'
 ---
 
-<div>
+<div class="blog-wrapper">
     <h2>latest Developments</h2>
     <ul class="blog_list">
-        {%- for post in collections.post | reverse-%}
-            <li>
-                <article>
-                    <img src="{{post.data.image}}" alt="{{post.data.imageAlt}}" width="500px">
-                    <h3>{{ post.data.title }}</h3>
-                    <p>{{ post.data.author }}</p>
-                    <p>{{ post.data.description}}</p>
-                    <a href="{{ post.url }}">Continue Reading</a>
+        {% if collections.post %}
+            <p>no posts yet!</p>
+        {% else %}
+        {%- for post in collections.post | reverse -%}
+            <li class="blog_list-item">
+                <article class="list_item-article">
+                    <div class="list_item-image-wrapper">
+                        <img src="{{post.data.image}}" alt="{{post.data.imageAlt}}">
+                    </div>
+                    <section class="list_item-content">
+                        <div class="content-author-div">
+                            <h3>{{ post.data.title }}</h3>
+                            <p>By {{ post.data.author }} on {{post.data.date | postDate }}</p>
+                        </div>
+                        <div class="content-description">
+                            <p>{{ post.data.description}}</p>
+                        </div>
+                        <a class="list_item-link" href="{{ post.url }}">Continue Reading</a>
+                    </section>
                 </article>
             </li>
         {%- endfor -%}
+        {% endif %}
     </ul>
 </div>
