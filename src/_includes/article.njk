@@ -1,0 +1,19 @@
+---
+layout: 'base.njk'
+---
+
+<article>
+    <div>
+        <h1>{{ title }}</h1>
+        <figure>
+            <img src="{{ image }}" alt="{{ imageAlt }}" width="500px">
+            <figcaption>
+                {{ imageAlt }}
+            </figcaption>
+        </figure>
+        <p>{{ author }}</p>
+        <p>{{ date }}</p>
+
+        {{ content | safe }}
+    </div>
+</article>

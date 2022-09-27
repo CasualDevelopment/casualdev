@@ -1,34 +1,20 @@
 ---
-title: casualDevelopments
 layout: 'base.njk'
 ---
 
-<h2>Latest Developments</h2>
-<ul class="blog_list">
-    {% for post in blogposts %}
-        <li class="blog_list--item">
-            <div class="blog_item--img-wrapper">
-                <img 
-                src={{"http://localhost:8082" + post.attributes.blogpost_image.data.attributes.url}} 
-                alt={{"http://localhost:8082" + post.attributes.blogpost_image.data.attributes.alternativeText}}
-/>
-            </div>
-            <div class="blog_item--author">
-                <h2>{{post.attributes.title}}</h2>
-                <div class="author-div">
-                    <p>By {{post.attributes.Author}}</p>
-                    <p>Published on: {{post.attributes.published_date}}</p>
-                </div>
-            </div>
-            <section class="blog_item--content">
-                {% block content%}
-                    {{post.attributes.content | safe}}
-                    {%endblock%}
-
-                </section>
-                <a href="/blog/posts/{{slug}}" class="blog_item-nav-link">
-                    <p>Read More</p>
-                </a>
+<div>
+    <h2>latest Developments</h2>
+    <ul class="blog_list">
+        {%- for post in collections.post | reverse-%}
+            <li>
+                <article>
+                    <img src="{{post.data.image}}" alt="{{post.data.imageAlt}}" width="500px">
+                    <h3>{{ post.data.title }}</h3>
+                    <p>{{ post.data.author }}</p>
+                    <p>{{ post.data.description}}</p>
+                    <a href="{{ post.url }}">Continue Reading</a>
+                </article>
             </li>
-        {% endfor %}
+        {%- endfor -%}
     </ul>
+</div>
