@@ -1,19 +1,21 @@
 ---
 layout: 'base.njk'
+pageTitle: CasualDev_
 ---
 
-<article>
-    <div>
+<article class="blogpost">
+    <div class="blogpost-content">
         <h1>{{ title }}</h1>
-        <figure>
-            <img src="{{ image }}" alt="{{ imageAlt }}" width="500px">
+        <p class="author-info">By {{ author }} on {{ date | postDate}}</p>
+        <figure class="blogpost-figure">
+            <img src="{{ image }}" alt="{{ imageAlt }}">
             <figcaption>
                 {{ imageAlt }}
             </figcaption>
         </figure>
-        <p>{{ author }}</p>
-        <p>{{ date }}</p>
 
-        {{ content | safe }}
+        <div class="blogpost-content-main">
+            {{ content | safe }}
+        </div>
     </div>
 </article>

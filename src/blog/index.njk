@@ -6,10 +6,8 @@ layout: 'base.njk'
 <div class="blog-wrapper">
     <h2>latest Developments</h2>
     <ul class="blog_list">
-        {% if collections.post %}
-            <p>no posts yet!</p>
-        {% else %}
-        {%- for post in collections.post | reverse -%}
+        {%- for post in collections.post -%}
+            {% if post.data.title %}
             <li class="blog_list-item">
                 <article class="list_item-article">
                     <div class="list_item-image-wrapper">
@@ -21,13 +19,13 @@ layout: 'base.njk'
                             <p>By {{ post.data.author }} on {{post.data.date | postDate }}</p>
                         </div>
                         <div class="content-description">
-                            <p>{{ post.data.description}}</p>
+                            <p>{{ post.data.description }}</p>
                         </div>
                         <a class="list_item-link" href="{{ post.url }}">Continue Reading</a>
                     </section>
                 </article>
             </li>
-        {%- endfor -%}
-        {% endif %}
+            {% endif %}
+        {%- endfor %}
     </ul>
 </div>
