@@ -1,10 +1,19 @@
 @import url(https://fonts.bunny.net/css?family=alatsi:400|alfa-slab-one:400);
+
+
 html,
 body {
   margin: 0 auto;
   font-family: "Alatsi", "Alfa Slab One", sans-serif;
   overflow-x: hidden;
+  font-display: swap;
 }
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 /* header styles */
 .header {
   max-width: 95vw;
@@ -42,6 +51,7 @@ body {
 
 .nav_item {
   padding: 0 2em;
+  font-size: 1.5rem;
 }
 
 .nav_item a {
@@ -63,6 +73,7 @@ body {
 
   .header_logo-wrapper img {
     width: 50%;
+    min-width: 50px;
   }
 
   .nav {
@@ -70,6 +81,10 @@ body {
   }
   .nav_list {
     justify-content: center;
+  }
+
+  .nav_item {
+    min-width: 50px;
   }
 }
 
@@ -99,7 +114,7 @@ body {
   content: "";
   background-color: #252324;
   padding: 3vw;
-  width: 45dvw;
+  width: 52dvw;
   z-index: 2;
   transform: rotate(-1.5deg) translateY(10.5vw) translateX(-2vw);
 }
@@ -213,6 +228,12 @@ body {
   display: flex;
   align-items: center;
   gap: 1em;
+}
+
+.social-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .profile_link-list li a svg {
