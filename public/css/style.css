@@ -114,9 +114,9 @@ a {
   content: "";
   background-color: #252324;
   padding: 3vw;
-  width: 52dvw;
+  width: 52vw;
   z-index: 2;
-  transform: rotate(-1.5deg) translateY(10.5vw) translateX(-2vw);
+  transform: rotate(-1.5deg) translateY(10.5vw) translateX(-1.5vw);
 }
 
 .hero_text-wrapper::after {
