@@ -1,0 +1,33 @@
+---
+pageTitle: Projects
+layout: 'base.njk'
+---
+
+<section>
+    <h2>What we've built</h2>
+    <ul>
+        {%- for project in collections.projects-%}
+            {% if project.data.title %}
+                <li>
+                    <div>
+                        <a href="{{project.data.live}}">
+                            <img src="{{project.data.img}}" alt="{{project.data.img-alt}}">
+                        </a>
+                    </div>
+                    <section>
+                        <h3>{{project.data.title}}</h3>
+                        <p>{{project.data.description}}</p>
+                        <ul>
+                            <li>
+                                <a href="{{project.data.github}}">Github</a>
+                            </li>
+                            <li>
+                                <a href="{{project.data.youtube}}">Youtube</a>
+                            </li>
+                        </ul>
+                    </section>
+                </li>
+            {% endif %}
+            {%- endfor%}
+        </ul>
+    </section>
