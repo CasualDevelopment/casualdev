@@ -445,13 +445,12 @@ a {
   margin: 0;
   padding: 1em;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 0.5fr));
-  justify-items: center;
-  align-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 500px));
+  justify-content: center;
 }
 
 .project-card {
-  max-width: 25vw;
+  max-width: 100%;
   box-shadow: 2px 2px 12px black;
   border-radius: 5px;
   padding: 5px;
