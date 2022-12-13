@@ -1,6 +1,5 @@
 @import url(https://fonts.bunny.net/css?family=alatsi:400|alfa-slab-one:400);
 
-
 html,
 body {
   margin: 0 auto;
@@ -94,7 +93,7 @@ a {
   width: 100%;
   height: 38dvw;
   min-height: 500px;
-  background-image: url("/assests/green-hero.jpg");
+  background-image: url("/assests/green-hero.webp");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -420,6 +419,114 @@ a {
     font-size: 1.25rem;
   }
 }
+
+/* project page styles */
+.project-section {
+  display: block;
+}
+
+.projects-title-div {
+  text-align: center;
+  font-size: 1.25rem;
+}
+
+.projects-title-div h2 {
+  text-decoration: underline 5px #51fa7b;
+  font-size: 3rem;
+  margin-bottom: 0;
+}
+
+.projects-title-div p {
+  margin-top: 0.15em;
+}
+
+.project-list {
+  list-style: none;
+  margin: 0;
+  padding: 1em;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 0.5fr));
+  justify-items: center;
+  align-content: center;
+}
+
+.project-card {
+  max-width: 25vw;
+  box-shadow: 2px 2px 12px black;
+  border-radius: 5px;
+  padding: 5px;
+  background-image: linear-gradient(
+    145deg,
+    black 15%,
+    #005c46 60%,
+    #51fa7b 95%
+  );
+}
+
+.project-img {
+  width: 100%;
+}
+
+.project-img:hover,
+.project-img:focus-within {
+  filter: brightness(115%);
+  box-shadow: inset 2px 4px 12px white;
+}
+
+.project-info {
+  display: block;
+  color: white;
+}
+
+.project-info h3 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.project-info p {
+  margin: 0;
+  font-size: 1.15rem;
+}
+
+.project-info ul {
+  list-style: none;
+  padding: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+
+.project-info .github {
+  padding: 0.5em;
+  background-color: #0d1117;
+  border-radius: 10px;
+}
+
+.project-info .github a {
+  display: flex;
+  gap: 0.5em;
+}
+
+.project-info .youtube {
+  padding: 0.5em;
+  background-color: #ff0000;
+  border-radius: 10px;
+}
+
+.project-info .youtube a {
+  display: flex;
+  gap: 0.5em;
+}
+
+.project-info .github a:hover,
+.project-info .github a:focus-within,
+.project-info .youtube a:hover,
+.project-info .youtube a:focus-within {
+  transform: rotate(7deg);
+}
+
+
 
 /* footer styles */
 .footer {

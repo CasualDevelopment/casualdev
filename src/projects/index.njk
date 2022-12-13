@@ -3,26 +3,34 @@ pageTitle: Projects
 layout: 'base.njk'
 ---
 
-<section>
-    <h2>What we've built</h2>
-    <ul>
-        {%- for project in collections.projects-%}
+<section class="project-section">
+    <div class="projects-title-div">
+        <h2>What we've built</h2>
+        <p>Here you'll find a collection of all our projects with links to their github repositories, youtube videos, and any blog posts we've written about them.</p>
+    </div>
+    <ul class="project-list">
+        {%- for project in collections.project-%}
             {% if project.data.title %}
-                <li>
+                <li class="project-card">
                     <div>
                         <a href="{{project.data.live}}">
-                            <img src="{{project.data.img}}" alt="{{project.data.img-alt}}">
+                            <img class="project-img" src="{{project.data.img}}" alt="{{project.data.img-alt}}">
                         </a>
                     </div>
-                    <section>
+                    <section class="project-info">
                         <h3>{{project.data.title}}</h3>
                         <p>{{project.data.description}}</p>
                         <ul>
-                            <li>
-                                <a href="{{project.data.github}}">Github</a>
+                            <li class="github">
+                                <a href="{{project.data.github}}">
+                                    <img src="../assests/github-mark-white.svg" alt="github logo" width="20px">
+                                    Github
+                                </a>
                             </li>
-                            <li>
-                                <a href="{{project.data.youtube}}">Youtube</a>
+                            <li class="youtube">
+                                <a href="{{project.data.youtube}}">
+                                    <img src="../assests/youtube_social_icon_dark.png" alt="youtube logo" width="20px">
+                                    Youtube</a>
                             </li>
                         </ul>
                     </section>
