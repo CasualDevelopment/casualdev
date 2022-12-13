@@ -29,6 +29,7 @@ collections:
       - { label: "Live", name: "live", widget: "string" }
       - { label: "Project Image", name: "img", widget: "image" }
       - { label: "Project Image Alt", name: "img-alt", widget: "string" }
+      - { label: "Blog Post Link", name: "blog-post-link", widget: "string" }
       - { label: "Github", name: "github", widget: "string" }
       - { label: "Youtube", name: "youtube", widget: "string" }
       - { label: "Tags", name: "tags", widget: "list", default: ["project"] }
