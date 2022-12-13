@@ -10,7 +10,7 @@ tags:
   - css
   - cats
   - youtube
-image: /assests/screenshot-2022-08-25-at-11-10-46-cats-the-website.png
+image: /assests/cats-the-website.webp
 imageAlt: 'Cats the website showing the website logo and navigation above a
   large hero image with text reading "for the meows" '
 ---
